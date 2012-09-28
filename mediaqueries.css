@@ -1,10 +1,10 @@
-/* General Page Styles */
+/* General Page Styles - Body */
 html { }
 body { }
 
 /* Desktops and laptops */
 @media only screen and (min-width : 1224px) {
-
+ /* Comment Here */
 }
 
 /* Portrait */
