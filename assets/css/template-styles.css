@@ -11,7 +11,8 @@ Author URI: http://example.com/
 
 /*************************************/
 /* IMPORT HTML5 RESET */
-@import('html5-resets.css');
+@import url('html5-resets.css');
+@import url('template-grid.css');
 
 /*************************************/
 /* WORDPRESS CORE CSS */
@@ -34,8 +35,8 @@ a img.aligncenter {display: block; margin-left: auto; margin-right: auto }
 /*************************************/
 /* GENERIC PAGE STYLES */
 html { }
-body { }
+body { font: 400 14px/2em helvetica,arial,sans-serif; color:#555; }
 
 /*************************************/
 /* IMPORT MEDIA QUERIES */
-@import('media-queries.css');
+@import url('media-queries.css');
