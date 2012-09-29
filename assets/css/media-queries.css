@@ -17,6 +17,11 @@ body { }
 
 }
 
+/* All devices larger the 320px and smaller/equal to 768px */
+@media only screen and (min-device-width : 320px) and (max-device-width : 768px) {
+
+}
+
 /* Smartphones (portrait and landscape) */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 

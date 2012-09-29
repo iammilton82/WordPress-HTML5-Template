@@ -38,4 +38,4 @@ body { }
 
 /*************************************/
 /* IMPORT MEDIA QUERIES */
-@import('mediaqueries.css');
+@import('media-queries.css');
