@@ -28,7 +28,9 @@
 	<!-- start header -->
 	<header id="header">
 		<div class="container">
-		
+			<nav>
+				<? wp_nav_menu('menu=MainNavigation'); ?>
+			</nav>
 		</div>
 	</header>
 	<!-- end header -->
