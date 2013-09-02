@@ -9,6 +9,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<? wp_head() ?>
     <link rel="stylesheet" type="text/css" media="all" href="<? bloginfo('template_url') ?>/assets/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="<? bloginfo('template_url') ?>/assets/css/base.css" />
     <link rel="stylesheet" type="text/css" media="all" href="<? bloginfo('template_url') ?>/assets/css/style.css" />
     <script type="text/javascript" src="<? bloginfo('template_url') ?>/assets/js/modernizr.js" /></script>
 	
