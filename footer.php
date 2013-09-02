@@ -5,7 +5,7 @@
 	</footer>
 
 	<!-- jQuery -->
-	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="<? bloginfo('template_url') ?>/assets/js/jquery.js"></script>
 	<script src="<? bloginfo('template_url') ?>/assets/js/bootstrap.js"></script>
 	<script src="<? bloginfo('template_url') ?>/assets/js/jquery-main.js"></script>
 	
