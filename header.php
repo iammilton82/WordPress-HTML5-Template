@@ -12,6 +12,12 @@
     <link rel="stylesheet" type="text/css" media="all" href="<? bloginfo('template_url') ?>/assets/css/base.css" />
     <link rel="stylesheet" type="text/css" media="all" href="<? bloginfo('template_url') ?>/assets/css/style.css" />
     <script type="text/javascript" src="<? bloginfo('template_url') ?>/assets/js/modernizr.js" /></script>
+	<!--[if lt IE 9]>
+	<script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="<? bloginfo('template_url') ?>/assets/js/jquery.js"></script>
+	<script type="text/javascript" src="<? bloginfo('template_url') ?>/assets/js/bootstrap.js"></script>
+    <script type="text/javascript" src="<? bloginfo('template_url') ?>/assets/js/respond.js" /></script>
 	
 	<!-- IOS Icons -->
 	<link rel="apple-touch-icon-precomposed" href="assets/img/icons/36x36.png">
