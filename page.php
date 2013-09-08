@@ -5,14 +5,24 @@
 		<div class="row-fluid">
 			<section class="col-xs-12 col-sm-12 col-med-12 col-lg-9">
 				<div class="mod-content">
-					<? while ( have_posts() ) : the_post(); ?>
+					<? while ( have_posts() ) { 
+						the_post(); 
+					?>
+					
 					<header id="header">
 						<h1 class="page-title"><? the_title(); ?></h1>
 					</header>
+					
 					<section id="body">
 						<? the_content(); ?>
 					</section>
-					<? endwhile; ?>  
+					<? 
+					
+					} 
+					
+					wp_reset_postdata();	
+						
+					?>  
 				</div>
 			</section>
 			

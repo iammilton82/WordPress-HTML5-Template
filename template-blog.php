@@ -13,38 +13,44 @@
 					<? 
 					$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 					query_posts('posts_per_page=5&paged=' . $paged);
-					if ( have_posts() ) : 
-					echo "<ul id='articles'>";
-					while ( have_posts() ) : the_post();		  
+					if ( have_posts() ) 
+					{ 
+						echo "<ul id='articles'>";
+						while ( have_posts() ) 
+						{ 
+						the_post();		  
 					?>
-					<li class="article">
-						<div class="post-info">
-							<div class="post-date"><? the_date('l, F j, Y')?></div>
-							<div class="comments">Comments: <?=get_comments_number()?></div>
-						</div>
-						
-						<div class="clearfix"></div>
-						
-						<header class="post-header">
-							<h1><a href="<? the_permalink() ?>"><? the_title() ?></a></h1>
-						</header>
-
-						<div class="clearfix"></div>
-
-						<section class="excerpt">
-							<? the_excerpt() ?>
-						</section>
-
-						<div class="clearfix"></div>
-
-						<footer class="post-footer">
-							<a href="<? the_permalink() ?>">Keep Reading...</a>
-						</footer>
-					</li>
+						<li class="article">
+							<div class="post-info">
+								<div class="post-date"><? the_date('l, F j, Y')?></div>
+								<div class="comments">Comments: <?=get_comments_number()?></div>
+							</div>
+							
+							<div class="clearfix"></div>
+							
+							<header class="post-header">
+								<h1><a href="<? the_permalink() ?>"><? the_title() ?></a></h1>
+							</header>
+	
+							<div class="clearfix"></div>
+	
+							<section class="excerpt">
+								<? the_excerpt() ?>
+							</section>
+	
+							<div class="clearfix"></div>
+	
+							<footer class="post-footer">
+								<a href="<? the_permalink() ?>">Keep Reading...</a>
+							</footer>
+						</li>
 					<?	  
-					endwhile;
-					echo "</ul>";
-					endif;	  
+						}
+						echo "</ul>";
+					}
+					
+					wp_reset_postdata();
+						  
 					?>
 					
 					<div id="pagination">

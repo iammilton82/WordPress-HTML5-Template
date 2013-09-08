@@ -5,7 +5,11 @@
 		<div class="row-fluid">
 			<article class="col-xs-12 col-sm-12 col-med-12 col-lg-9">
 				<div class="mod-content">
-					<? while ( have_posts() ) : the_post(); ?>
+					<? 
+					while ( have_posts() ) 
+					{ 
+						the_post(); 
+					?>
 					<header id="header">
 						<h1 class="page-title"><a href="<?=home_url()?>/blog">Blog</a></h1>
 					</header>
@@ -25,7 +29,13 @@
                     	<?php comments_template( '', true ); ?>
                     </div>
 
-					<? endwhile; ?>  
+					<? 
+					
+					}
+					
+					wp_reset_postdata();
+					
+					?>  
 				</div>
 			</article>
 			
