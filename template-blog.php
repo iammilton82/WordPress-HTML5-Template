@@ -7,7 +7,7 @@
 <div id="content">
 	<div class="container">
 		<div class="row-fluid">
-			<div class="span7">
+			<section class="col-xs-12 col-sm-12 col-med-12 col-lg-9">
 				<div class="mod-content">
 					  
 					<? 
@@ -53,7 +53,11 @@
 					</div>  
 					  
 				</div>
-			</div>
+			</section>
+			
+			<? get_sidebar(); ?>
+			
+			
 		</div>
 	</div>
 </div>

@@ -3,7 +3,7 @@
 <div id="content">
 	<div class="container">
 		<div class="row-fluid">
-			<div class="col-xs-12 col-sm-12 col-med-12 col-lg-12">
+			<section class="col-xs-12 col-sm-12 col-med-12 col-lg-9">
 				<div class="mod-content">
 					<? while ( have_posts() ) : the_post(); ?>
 					<header id="header">
@@ -14,7 +14,10 @@
 					</section>
 					<? endwhile; ?>  
 				</div>
-			</div>
+			</section>
+			
+			<? get_sidebar(); ?>
+			
 		</div>
 	</div>
 </div>
