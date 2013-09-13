@@ -1,9 +1,14 @@
 <?
 
 // add custom nav
+
 if (function_exists('add_theme_support')) {
     add_theme_support('menus');
 }
+
+// remove wordpress admin bar
+
+add_filter('show_admin_bar', '__return_false');  
 
 
 // register the sidebar inside of sidebar.php
