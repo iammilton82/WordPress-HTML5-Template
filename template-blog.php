@@ -12,7 +12,7 @@
 					  
 					<? 
 					$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-					query_posts('posts_per_page=5&paged=' . $paged);
+					query_posts('posts_per_page=8&paged=' . $paged);
 					if ( have_posts() ) 
 					{
 						get_template_part( 'snippet-blogloop', 'none' );

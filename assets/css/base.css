@@ -81,4 +81,8 @@ img.size-full {
     max-width: 97.5%;
     width: auto; /* Prevent stretching of full-size images with height and >>width attributes in IE8 */
 }
-	
+
+img.wp-post-image {
+    max-width: 100%;
+    max-height: auto;
+}

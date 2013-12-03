@@ -1,13 +1,18 @@
 <?
 
-// add custom nav
+// add featured image support
+add_theme_support( 'post-thumbnails' );
+the_post_thumbnail('thumbnail'); // Maximum of 150px x 150px
+the_post_thumbnail('medium'); // Maximum of 300px x 300px
+the_post_thumbnail('large'); // Maximum of 640px x 640px
 
+
+// add custom nav
 if (function_exists('add_theme_support')) {
     add_theme_support('menus');
 }
 
 // remove wordpress admin bar
-
 add_filter('show_admin_bar', '__return_false');  
 
 
@@ -25,6 +30,44 @@ if (function_exists('register_sidebar')) {
 	register_sidebar($sides);
 	
 }
+
+// change the excert length from 55 to whatever length is in the function
+
+function longer_excerpt_length( $length ) {
+    return 100;
+}
+add_filter( 'excerpt_length', 'longer_excerpt_length', 999 );
+
+
+// ad no follow automatically to links going external
+add_filter('the_content', 'auto_nofollow');
+function auto_nofollow($content) {
+    //return stripslashes(wp_rel_nofollow($content));
+ 
+    return preg_replace_callback('/<a>]+/', 'auto_nofollow_callback', $content);
+}
+ 
+function auto_nofollow_callback($matches) {
+    $link = $matches[0];
+    $site_link = get_bloginfo('url');
+ 
+    if (strpos($link, 'rel') === false) {
+        $link = preg_replace("%(href=S(?!$site_link))%i", 'rel="nofollow" $1', $link);
+    } elseif (preg_match("%href=S(?!$site_link)%i", $link)) {
+        $link = preg_replace('/rel=S(?!nofollow)S*/i', 'rel="nofollow"', $link);
+    }
+    return $link;
+}
+
+// remove the width and height attribute from uploaded content
+add_filter( 'post_thumbnail_html', 'remove_width_attribute', 10 );
+add_filter( 'image_send_to_editor', 'remove_width_attribute', 10 );
+ 
+function remove_width_attribute( $html ) {
+    $html = preg_replace( '/(width|height)="\d*"\s/', "", $html );
+    return $html;
+}
+
 
 
 // mobile detection class
